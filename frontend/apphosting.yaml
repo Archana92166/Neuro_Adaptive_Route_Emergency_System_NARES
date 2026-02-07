@@ -1,0 +1,12 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  # Increase this value if you'd like to automatically spin up
+  # more instances in response to increased traffic.
+  maxInstances: 1
+  secrets:
+    # This secret must be created in Google Cloud Secret Manager.
+    # It provides the API key for server-side Google Maps services (Directions, Geocoding).
+    - secret: GOOGLE_MAPS_API_KEY
+      environmentVariable: GOOGLE_MAPS_API_KEY
